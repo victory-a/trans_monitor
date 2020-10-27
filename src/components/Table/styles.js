@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import colors from "styles/colors";
 import { device } from "styles";
 
 export const TableContainer = styled.div`
@@ -15,10 +16,21 @@ export const TableContainer = styled.div`
   }
 `;
 
+export const SectionTitle = styled.h2`
+  font-weight: bold;
+  font-size: 3.6rem;
+`;
+
 export const TableWrapper = styled.div`
   width: 100%;
   overflow: scroll;
   background: transparent;
+`;
+
+export const ControlsWrapper = styled.div`
+  & .blue {
+    color: ${colors.blue};
+  }
 `;
 
 export const Table = styled.table`

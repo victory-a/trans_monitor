@@ -1,46 +1,91 @@
-export const Tablecontents = [
+export const tablecontents = [
   {
     firstName: "jack",
     lastName: "bauer",
     device: "Apple Mac Book 15” 250 SSD 12GB",
     price: "73430",
-    transactionNo: "1234567890",
+    transactionNo: "1234567",
     time: "12:30",
     status: "pending"
   },
   {
     firstName: "rose",
     lastName: "shawn",
-    device: "Apple Mac Book 15” 250 SSD 12GB",
+    device: "Hp Pavilion 15” 250 SSD 12GB",
     price: "73430",
-    transactionNo: "1234567890",
+    transactionNo: "7890452",
     time: "12:30",
     status: "reconciled"
   },
   {
     firstName: "david",
     lastName: "muitch",
-    device: "Apple Mac Book 15” 250 SSD 12GB",
+    device: "Asus Zenbook 15” 250 SSD 12GB",
     price: "73430",
-    transactionNo: "1234567890",
+    transactionNo: "167890875",
     time: "12:30",
     status: "un-reconciled"
   },
   {
     firstName: "eddy",
     lastName: "bauer",
-    device: "Apple Mac Book 15” 250 SSD 12GB",
+    device: "Dell Inspirion 15” 250 SSD 12GB",
     price: "73430",
-    transactionNo: "1234567890",
+    transactionNo: "1234789056",
     time: "12:30",
     status: "un-reconciled"
   },
   {
+    firstName: "rose",
+    lastName: "shawn",
+    device: "Hp Pavilion 15” 250 SSD 12GB",
+    price: "73430",
+    transactionNo: "7890452",
+    time: "12:30",
+    status: "reconciled"
+  },
+  {
     firstName: "yomi",
     lastName: "bauer",
-    device: "Apple Mac Book 15” 250 SSD 12GB",
+    device: "Lenovo Thinkpad” 250 SSD 12GB",
     price: "73430",
-    transactionNo: "1234567890",
+    transactionNo: "12345566",
+    time: "12:30",
+    status: "pending"
+  },
+  {
+    firstName: "david",
+    lastName: "muitch",
+    device: "Asus Zenbook 15” 250 SSD 12GB",
+    price: "73430",
+    transactionNo: "167890875",
+    time: "12:30",
+    status: "un-reconciled"
+  },
+  {
+    firstName: "eddy",
+    lastName: "bauer",
+    device: "Dell Inspirion 15” 250 SSD 12GB",
+    price: "73430",
+    transactionNo: "1234789056",
+    time: "12:30",
+    status: "un-reconciled"
+  },
+  {
+    firstName: "rose",
+    lastName: "shawn",
+    device: "Hp Pavilion 15” 250 SSD 12GB",
+    price: "73430",
+    transactionNo: "7890452",
+    time: "12:30",
+    status: "reconciled"
+  },
+  {
+    firstName: "yomi",
+    lastName: "bauer",
+    device: "Lenovo Thinkpad” 250 SSD 12GB",
+    price: "73430",
+    transactionNo: "12345566",
     time: "12:30",
     status: "pending"
   }

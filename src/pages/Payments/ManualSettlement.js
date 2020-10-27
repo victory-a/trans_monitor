@@ -1,9 +1,10 @@
 import React from "react";
+import { EmptyState } from "components/EmptyState";
 
 export default function ManualSettlement() {
   return (
-    <div>
-      <p>Manual Settlement</p>
-    </div>
+    <>
+      <EmptyState />
+    </>
   );
 }

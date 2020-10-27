@@ -1,9 +1,10 @@
 import React from "react";
+import { EmptyState } from "components/EmptyState";
 
 export default function AllOrders() {
   return (
-    <div>
-      <p>All Orders</p>
-    </div>
+    <>
+      <EmptyState />
+    </>
   );
 }

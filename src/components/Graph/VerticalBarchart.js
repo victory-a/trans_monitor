@@ -3,6 +3,7 @@ import { BarChart as RechartBarChart, Bar, XAxis, YAxis } from "recharts";
 import { barData } from "data";
 
 import { BarchartWrapper, BarchartContainer } from "./styles";
+import { Box } from "@chakra-ui/core";
 
 export default function VerticalBarchart() {
   return (
@@ -20,20 +21,21 @@ export default function VerticalBarchart() {
           Total Orders: <span className="blue">100</span>
         </p>
       </BarchartContainer>
-
-      <BarchartContainer>
-        <h3>Payments</h3>
-        <StackedVerticalBarChart />
-        <p>
-          Un-reconcilled Payments: <span className="yellow">20</span>
-        </p>
-        <p>
-          Reconcilled Payments: <span className="green">80</span>
-        </p>
-        <p>
-          Total Payments: <span className="blue">100</span>
-        </p>
-      </BarchartContainer>
+      <Box mt="2rem">
+        <BarchartContainer>
+          <h3>Payments</h3>
+          <StackedVerticalBarChart />
+          <p>
+            Un-reconcilled Payments: <span className="yellow">20</span>
+          </p>
+          <p>
+            Reconcilled Payments: <span className="green">80</span>
+          </p>
+          <p>
+            Total Payments: <span className="blue">100</span>
+          </p>
+        </BarchartContainer>
+      </Box>
     </BarchartWrapper>
   );
 }

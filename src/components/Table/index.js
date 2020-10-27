@@ -1,16 +1,96 @@
 import React from "react";
-import { TableContainer, TableWrapper, Table as StyledTable } from "./styles.js";
-import { Tablecontents } from "data";
+import {
+  TableContainer,
+  TableWrapper,
+  Table as StyledTable,
+  SectionTitle,
+  ControlsWrapper
+} from "./styles.js";
+import { tablecontents } from "data";
+import { Search } from "components/Search";
 import { ReactComponent as Arrow } from "assets/arrow-down.svg";
 import { Box, Flex, Avatar, Button } from "@chakra-ui/core";
+import CustomMenu from "components/CustomMenu.js";
+import Fuse from "fuse.js";
 
 export default function Table() {
+  const [filtered, setFiltered] = React.useState(tablecontents);
+
+  // value from menu select
+  const [selected, setSelected] = React.useState({
+    label: "All",
+    value: "all"
+  });
+
+  // value from search bpx
+  const [searchTerm, setSearchTerm] = React.useState("");
+
+  // select change handler
+  React.useEffect(() => {
+    if (selected.value) {
+      let results = tablecontents;
+
+      if (selected.value === "all") results = tablecontents;
+      else {
+        results = tablecontents.filter(({ status }) => status === selected.value);
+      }
+
+      setFiltered(results);
+    }
+  }, [selected.value]);
+
+  // search box change handler
+  React.useEffect(() => {
+    const fuse = new Fuse(tablecontents, {
+      keys: ["device", "transactionNo"]
+    });
+
+    const searchString = searchTerm.trim();
+    const results = fuse.search(searchString).map(({ item }) => item);
+
+    if (results.length > 0) {
+      setFiltered(results);
+    } else {
+      setFiltered(tablecontents);
+    }
+  }, [searchTerm]);
+
   return (
     <TableContainer>
+      <SectionTitle>Payments</SectionTitle>
+      <ControlsWrapper>
+        <Flex justify="space-between" my="1rem">
+          <Flex flex="0.8">
+            <Box as="p" mr="1rem">
+              Showing
+            </Box>
+            <Box as="p" mr="1rem" className="blue">
+              20
+            </Box>
+            <Box as="p">out of 500 payments</Box>
+          </Flex>
+
+          <Search
+            placeholder="Search by device name or transaction ID"
+            value={searchTerm}
+            onChange={({ target }) => setSearchTerm(target.value)}
+          />
+
+          <Flex flex="0.8" justify="flex-end">
+            <Box as="p" mr="2rem">
+              Show
+            </Box>
+
+            <Box>
+              <CustomMenu {...{ selected, setSelected }} />
+            </Box>
+          </Flex>
+        </Flex>
+      </ControlsWrapper>
       <TableWrapper>
         <StyledTable>
           <TableHeading />
-          <TableContent content={Tablecontents} />
+          <TableContent content={filtered} />
         </StyledTable>
       </TableWrapper>
     </TableContainer>
@@ -22,31 +102,33 @@ function TableHeading() {
 
   return (
     <thead>
-      {heading.map(item => {
-        if (item === "Item Type") {
-          return (
-            <th key={item} style={{ width: "30%" }}>
-              {item}
-            </th>
-          );
-        }
-        if (item === "Transaction No") {
-          return (
-            <th key={item} style={{ width: "20%" }}>
-              {item}
-            </th>
-          );
-        }
-        if (item === "Price" || item === "Time") {
-          return (
-            <th key={item} style={{ width: "15%" }}>
-              {item}
-            </th>
-          );
-        }
+      <tr>
+        {heading.map(item => {
+          if (item === "Item Type") {
+            return (
+              <th key={item} style={{ width: "30%" }}>
+                {item}
+              </th>
+            );
+          }
+          if (item === "Transaction No") {
+            return (
+              <th key={item} style={{ width: "20%" }}>
+                {item}
+              </th>
+            );
+          }
+          if (item === "Price" || item === "Time") {
+            return (
+              <th key={item} style={{ width: "15%" }}>
+                {item}
+              </th>
+            );
+          }
 
-        return <th key={item}>{item}</th>;
-      })}
+          return <th key={item}>{item}</th>;
+        })}
+      </tr>
     </thead>
   );
 }

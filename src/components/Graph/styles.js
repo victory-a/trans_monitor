@@ -21,13 +21,18 @@ export const LineChartWrapper = styled.div`
   flex-direction: column;
   cursor: pointer;
   background-color: ${colors.white};
-  /* margin-right: auto; */
   width: 100%;
 `;
 
-export const ChartControls = styled.div``;
+export const ChartControls = styled.div`
+  padding: 1rem 3rem;
 
-export const ChartController = styled.div``;
+  h3 {
+    font-weight: bold;
+    color: "#4F4F4F";
+    font-size: 1.8rem;
+  }
+`;
 
 export const BarchartWrapper = styled.div`
   flex: 0.4;
@@ -48,7 +53,7 @@ export const BarchartContainer = styled.div`
   color: ${colors.primary};
   width: 100%;
   font-size: 1.4rem;
-  padding: 2rem 1rem;
+  padding: 3rem 1rem;
   background-color: ${colors.white};
 
   h3 {

@@ -1,9 +1,10 @@
 import React from "react";
+import { EmptyState } from "components/EmptyState";
 
 export default function ReconciledOrders() {
   return (
-    <div>
-      <p>Reconciled Orders</p>
-    </div>
+    <>
+      <EmptyState />
+    </>
   );
 }
