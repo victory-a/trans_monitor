@@ -6,7 +6,7 @@ export const Search = props => {
   const { placeholder, onChange, value } = props;
 
   return (
-    <InputGroup flex="1" mx="10rem" width="50%">
+    <InputGroup flex="1">
       <InputLeftElement children={<Icon name="search" color="gray.300" />} />
 
       <Input

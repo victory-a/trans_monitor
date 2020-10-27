@@ -4,7 +4,8 @@ import {
   TableWrapper,
   Table as StyledTable,
   SectionTitle,
-  ControlsWrapper
+  ControlsWrapper,
+  ControlsContainer
 } from "./styles.js";
 import { tablecontents } from "data";
 import { Search } from "components/Search";
@@ -12,6 +13,7 @@ import { ReactComponent as Arrow } from "assets/arrow-down.svg";
 import { Box, Flex, Avatar, Button } from "@chakra-ui/core";
 import CustomMenu from "components/CustomMenu.js";
 import Fuse from "fuse.js";
+import { LaptopScreen } from "Layout/viewports";
 
 export default function Table() {
   const [filtered, setFiltered] = React.useState(tablecontents);
@@ -59,16 +61,18 @@ export default function Table() {
     <TableContainer>
       <SectionTitle>Payments</SectionTitle>
       <ControlsWrapper>
-        <Flex justify="space-between" my="1rem">
-          <Flex flex="0.8">
-            <Box as="p" mr="1rem">
-              Showing
-            </Box>
-            <Box as="p" mr="1rem" className="blue">
-              20
-            </Box>
-            <Box as="p">out of 500 payments</Box>
-          </Flex>
+        <ControlsContainer>
+          <LaptopScreen>
+            <Flex mr="10rem">
+              <Box as="p" mr="1rem">
+                Showing
+              </Box>
+              <Box as="p" mr="1rem" className="blue">
+                20
+              </Box>
+              <Box as="p">out of 500 payments</Box>
+            </Flex>
+          </LaptopScreen>
 
           <Search
             placeholder="Search by device name or transaction ID"
@@ -76,16 +80,18 @@ export default function Table() {
             onChange={({ target }) => setSearchTerm(target.value)}
           />
 
-          <Flex flex="0.8" justify="flex-end">
-            <Box as="p" mr="2rem">
-              Show
-            </Box>
+          <LaptopScreen>
+            <Flex ml="10rem">
+              <Box as="p" mr="2rem">
+                Show
+              </Box>
 
-            <Box>
-              <CustomMenu {...{ selected, setSelected }} />
-            </Box>
-          </Flex>
-        </Flex>
+              <Box>
+                <CustomMenu {...{ selected, setSelected }} />
+              </Box>
+            </Flex>
+          </LaptopScreen>
+        </ControlsContainer>
       </ControlsWrapper>
       <TableWrapper>
         <StyledTable>

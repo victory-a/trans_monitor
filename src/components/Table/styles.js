@@ -33,6 +33,19 @@ export const ControlsWrapper = styled.div`
   }
 `;
 
+export const ControlsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+
+  @media ${device.laptop} {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2rem 0;
+  }
+`;
+
 export const Table = styled.table`
   width: 1000px;
   table-layout: fixed;

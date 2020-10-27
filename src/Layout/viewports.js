@@ -27,3 +27,9 @@ export const NonTabletScreen = ({ children }) => {
   if (isTablet) return children;
   return null;
 };
+export const LaptopScreen = ({ children }) => {
+  const isLaptop = useMediaQuery({ minWidth: 1025 });
+
+  if (isLaptop) return children;
+  return null;
+};
