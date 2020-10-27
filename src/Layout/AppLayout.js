@@ -1,7 +1,7 @@
 import React from "react";
-import { TopNav } from "components/Navigation";
+import { TopNav, MainNav, MobileNav } from "components/Navigation";
 
-import { MobileScreen, NonTabletScreen } from "./viewports";
+import { NonTabletScreen, TabletScreen } from "./viewports";
 import {
   Container,
   MainContentContainer,
@@ -23,8 +23,14 @@ export default function AppLayout({ children }) {
 
         <MainContentContainer>
           <NonTabletScreen>
-            <SideNavContainer></SideNavContainer>
+            <SideNavContainer>
+              <MainNav />
+            </SideNavContainer>
           </NonTabletScreen>
+
+          <TabletScreen>
+            <MobileNav></MobileNav>
+          </TabletScreen>
 
           <MainContentWrapper>{children}</MainContentWrapper>
         </MainContentContainer>

@@ -19,13 +19,21 @@ const Drawer = props => {
   );
 };
 
-export function useDrawer() {
+const DrawerContext = React.createContext();
+
+export function DrawerProvider({ children }) {
+  const { Provider } = DrawerContext;
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  return {
-    isOpen,
-    onOpen,
-    onClose
-  };
+  return <Provider value={{ isOpen, onOpen, onClose }}>{children}</Provider>;
+}
+export function useDrawer() {
+  const context = React.useContext(DrawerContext);
+
+  if (context === undefined) {
+    throw new Error("useDrawer must be used within a DrawerProvider");
+  }
+
+  return context;
 }
 export default Drawer;
