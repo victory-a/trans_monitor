@@ -4,17 +4,14 @@ import {
   useDisclosure,
   Drawer as ChakraDrawer,
   DrawerOverlay,
-  DrawerContent,
-  DrawerBody
+  DrawerContent
 } from "@chakra-ui/core";
 
 const Drawer = props => {
   return (
     <ChakraDrawer size="xs" placement="left" {...props}>
       <DrawerOverlay />
-      <DrawerContent>
-        <DrawerBody>{props.children}</DrawerBody>
-      </DrawerContent>
+      <DrawerContent>{props.children}</DrawerContent>
     </ChakraDrawer>
   );
 };
@@ -27,6 +24,8 @@ export function DrawerProvider({ children }) {
 
   return <Provider value={{ isOpen, onOpen, onClose }}>{children}</Provider>;
 }
+
+// custom hook for accessing dwawer controls
 export function useDrawer() {
   const context = React.useContext(DrawerContext);
 

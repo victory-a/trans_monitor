@@ -17,7 +17,6 @@ export default function AppLayout({ children }) {
     <Provider value={{ pageTitle, setPageTitle }}>
       <Container>
         <TopNavContainer>
-          {/* <TopNav /> */}
           <TopNav />
         </TopNavContainer>
 
@@ -29,7 +28,7 @@ export default function AppLayout({ children }) {
           </NonTabletScreen>
 
           <TabletScreen>
-            <MobileNav></MobileNav>
+            <MobileNav />
           </TabletScreen>
 
           <MainContentWrapper>{children}</MainContentWrapper>

@@ -1,12 +1,11 @@
 import React from "react";
-import { NavLink, Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Box, Flex, Avatar } from "@chakra-ui/core";
-import navList from "routes/navList";
 import UserImage from "assets/user.svg";
 import { ReactComponent as Logo } from "assets/logo.svg";
 import { ReactComponent as Burger } from "assets/burger.svg";
 import { AiOutlineBell } from "react-icons/ai";
-import Drawer, { useDrawer } from "components/Drawer";
+import { useDrawer } from "components/Drawer";
 
 import { NavLogoContainer, TopNavlist, NotificationWrapper, NotificationBadge } from "./styles";
 
@@ -73,8 +72,6 @@ export default function TopNav() {
           <Avatar name={`${user.firstName} ${user.lastName}`} src={UserImage} size="lg" />
         </Box>
       </Flex>
-
-      {/* <Drawer isOpen={isDrawerOpen} onClose={onCloseDrawer} /> */}
     </React.Fragment>
   );
 }

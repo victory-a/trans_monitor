@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { device } from "styles";
 import colors from "styles/colors";
 
 export const Container = styled.div`
@@ -33,11 +32,12 @@ export const MainContentContainer = styled.div`
 `;
 
 export const SideNavContainer = styled.aside`
-  height: 100%;
-  width: 20rem;
+  min-height: 100%;
+  width: 23rem;
   display: flex;
   background: ${colors.white};
-  border: 1px solid red;
+  flex-direction: column;
+  align-items: center;
 
   a {
     &:hover {
@@ -50,4 +50,5 @@ export const MainContentWrapper = styled.div`
   flex: 1;
   overflow-y: scroll;
   scroll-behavior: smooth;
+  background-color: ${colors.lightGrey};
 `;

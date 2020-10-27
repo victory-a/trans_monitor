@@ -18,63 +18,54 @@ const routes = [
     path: "/",
     exact: true,
     isPrivate: false,
-    category: "main",
     component: Overview
   },
   {
     path: "/profile",
     exact: true,
     isPrivate: false,
-    category: "main",
     component: Profile
   },
   {
     path: "/all-payments",
     exact: true,
     isPrivate: false,
-    category: "payments",
     component: AllPayments
   },
   {
     path: "/manual-settlement",
     exact: true,
     isPrivate: false,
-    category: "payments",
     component: ManualSettlement
   },
   {
     path: "/reconciled-payments",
     exact: true,
     isPrivate: false,
-    category: "payments",
     component: ReconciledPayments
   },
   {
     path: "/unreconciled-payments",
     exact: true,
     isPrivate: false,
-    category: "payments",
     component: UnReconciledPayments
   },
   {
     path: "/all-orders",
     exact: true,
     isPrivate: false,
-    category: "orders",
     component: AllOrders
   },
   {
     path: "/pending-orders",
     exact: true,
     isPrivate: false,
-    category: "orders",
     component: PendingOrders
   },
   {
     path: "/reconciled-orders",
     exact: true,
     isPrivate: false,
-    category: "orders",
     component: ReconciledOrders
   },
   {

@@ -13,46 +13,55 @@ export default [
   {
     path: "/",
     title: "Overview",
-    logo: <Overview />
+    logo: <Overview />,
+    category: "main"
   },
   {
     path: "/profile",
     title: "Profile",
-    logo: <Profile />
+    logo: <Profile />,
+    category: "profile"
   },
   {
     path: "/all-payments",
     title: "All Payments",
-    logo: <AllPayments />
+    logo: <AllPayments />,
+    category: "payments"
   },
   {
     path: "/manual-settlement",
     title: "Manual Settlement",
-    logo: <ManualSettlement />
+    logo: <ManualSettlement />,
+    category: "payments"
   },
   {
     path: "/reconciled-payments",
     title: "Reconciled Payments",
-    logo: <ReconciledPayments />
+    logo: <ReconciledPayments />,
+    category: "payments"
   },
   {
     path: "/unreconciled-payments",
     title: "UnReconciled Payments",
-    logo: <UnReconciledPayments />
+    logo: <UnReconciledPayments />,
+    category: "payments"
   },
   {
     path: "/all-orders",
     title: "All Orders",
-    logo: <AllOrders />
+    logo: <AllOrders />,
+    category: "orders"
   },
   {
     path: "/pending-orders",
     title: "Pending Orders",
-    logo: <PendingOrders />
+    logo: <PendingOrders />,
+    category: "orders"
   },
   {
     path: "/reconciled-orders",
     title: "Reconciled Orders",
-    logo: <ReconciledOrders />
+    logo: <ReconciledOrders />,
+    category: "orders"
   }
 ];
