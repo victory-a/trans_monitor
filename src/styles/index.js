@@ -55,6 +55,34 @@ const GlobalStyles = createGlobalStyle`
     font-size: 1.2rem !important;
     font-weight: bold !important;
     font-family: 'Roboto', sans-serif !important;
+
+    span {
+      font-size: 20px;
+      margin-right: .5rem;
+      vertical-align: top;
+      height: 7px;
+      width: 7px;
+      border-radius: 20px;
+
+      &.green {
+        background-color: ${colors.green};
+      }
+      &.yellow {
+        background-color: ${colors.yellow};
+      }
+      &.un {
+        background-color: ${colors.un};
+      }
+
+      & ::un {
+        content: " ";
+        color: red;
+
+        position: relative;
+        height: 10px;
+        width: 10px;
+      }
+    }
   }
 
   input {
