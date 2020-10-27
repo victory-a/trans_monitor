@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function index() {
+export default function AllOrders() {
   return (
     <div>
-      <p>Profile</p>
+      <p>All Orders</p>
     </div>
   );
 }

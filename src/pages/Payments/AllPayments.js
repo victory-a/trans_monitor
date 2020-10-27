@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function index() {
+export default function AllPayments() {
   return (
     <div>
-      <p>Profile</p>
+      <p>All Payments</p>
     </div>
   );
 }

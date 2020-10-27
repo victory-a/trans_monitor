@@ -1,24 +1,22 @@
-import React, { useEffect, lazy, Suspense } from "react";
+import React, { Suspense } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { FullPageSpinner } from "components/loaders.js";
-
-const loadAuthenticatedApp = () => import("app/authenticatedApp");
-const AuthenticatedApp = lazy(loadAuthenticatedApp);
-
-const UnauthenticatedApp = lazy(() => import("app/unauthenticatedApp"));
+import AppLayout from "Layout/AppLayout";
+import routes from "routes/routesList";
 
 function App() {
-  // fetch user from state here
-  let user = null;
-
-  // load authenticated app in bg while user completes auth form
-  useEffect(() => {
-    loadAuthenticatedApp();
-  }, []);
-
   return (
-    <Suspense fallback={<FullPageSpinner />}>
-      {user ? <AuthenticatedApp /> : <UnauthenticatedApp />}
-    </Suspense>
+    <Router>
+      <AppLayout>
+        <Suspense fallback={<FullPageSpinner />}>
+          <Switch>
+            {routes.map(({ component, ...rest }, index) => (
+              <Route component={component} {...rest} key={`app-route-${index}`} />
+            ))}
+          </Switch>
+        </Suspense>
+      </AppLayout>
+    </Router>
   );
 }
 
