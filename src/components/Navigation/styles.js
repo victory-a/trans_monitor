@@ -42,8 +42,10 @@ export const NavListItem = styled.li`
 export const NotificationWrapper = styled.div`
   position: relative;
   margin: 0 3rem;
+  cursor: pointer;
+
   svg {
-    height: 20px;
+    height: 18px;
     width: 20px;
   }
 `;
@@ -54,6 +56,6 @@ export const NotificationBadge = styled.p`
   right: 2px;
   background-color: #1860ec;
   color: ${colors.white};
-  padding: 2px 3px;
+  padding: 1.8px 3px;
   border-radius: 80%;
 `;

@@ -34,9 +34,10 @@ export const MainContentContainer = styled.div`
 
 export const SideNavContainer = styled.aside`
   height: 100%;
-  width: 18rem;
+  width: 20rem;
   display: flex;
   background: ${colors.white};
+  border: 1px solid red;
 
   a {
     &:hover {
