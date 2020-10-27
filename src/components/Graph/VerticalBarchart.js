@@ -4,7 +4,7 @@ import { barData } from "data";
 
 import { BarchartWrapper, BarchartContainer } from "./styles";
 
-export default function VerticalBarchart({ data }) {
+export default function VerticalBarchart() {
   return (
     <BarchartWrapper>
       <BarchartContainer>
