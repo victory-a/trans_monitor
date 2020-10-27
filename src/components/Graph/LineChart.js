@@ -11,7 +11,7 @@ import {
 } from "recharts";
 
 import { lineData } from "data";
-import { LineChartWrapper, ChartControls, ChartController } from "./styles";
+import { LineChartWrapper, ChartControls } from "./styles";
 
 export default function LineChart() {
   return (
