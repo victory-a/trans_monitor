@@ -1,13 +1,13 @@
 import React from "react";
-import { ReactComponent as Overview } from "assets/overview";
-import { ReactComponent as Profile } from "assets/merchant-profile";
-import { ReactComponent as AllPayments } from "assets/all-Payments";
-import { ReactComponent as ManualSettlement } from "assets/manual-settlement";
-import { ReactComponent as ReconciledPayments } from "assets/reconciled-payments";
-import { ReactComponent as UnReconciledPayments } from "assets/unreconciled-payments";
-import { ReactComponent as AllOrders } from "assets/all-orders";
-import { ReactComponent as PendingOrders } from "assets/pending-orders";
-import { ReactComponent as ReconciledOrders } from "assets/reconciled-orders";
+import { ReactComponent as Overview } from "assets/overview.svg";
+import { ReactComponent as Profile } from "assets/merchant-profile.svg";
+import { ReactComponent as AllPayments } from "assets/all-payments.svg";
+import { ReactComponent as ManualSettlement } from "assets/manual-settlement.svg";
+import { ReactComponent as ReconciledPayments } from "assets/reconciled-payments.svg";
+import { ReactComponent as UnReconciledPayments } from "assets/unreconciled-payments.svg";
+import { ReactComponent as AllOrders } from "assets/all-orders.svg";
+import { ReactComponent as PendingOrders } from "assets/pending-orders.svg";
+import { ReactComponent as ReconciledOrders } from "assets/reconciled-orders.svg";
 
 export default [
   {

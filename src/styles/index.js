@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import colors from "styles/colors";
 
 const size = {
   mobile: "375px",
@@ -15,7 +16,6 @@ export const device = {
 };
 
 const GlobalStyles = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Raleway:wght@400;500&display=swap');
   .js-focus-visible :focus:not([data-focus-visible-added]) {
     outline: none;
     box-shadow: none;
@@ -32,15 +32,40 @@ const GlobalStyles = createGlobalStyle`
  body {
     width: 100%;
     height: 100%;
-    font-size: 1.6rem;
+    font-size: 14px;
     min-height: 100%;
     font-family: 'Raleway', sans-serif;
     -webkit-font-smoothing: antialiased;
     outline: none;
+    color: ${colors.primary};
+    /* background-color: ${colors.lightGrey}; */
   }
 
   ul {
     list-style-type: none;
+  }
+
+  a {
+    text-decoration: none !important;
+    transform: color .5s;
+  }
+
+  button {
+/* override chakra-ui default button styles */
+    font-size: 1.2rem !important;
+    font-weight: bold !important;
+    font-family: 'Roboto', sans-serif !important;
+  }
+
+  input {
+    font-size: 14px !important;
+    
+/* override chakra-ui default input styles */
+    :focus {
+      border: 1px solid #8dcfff !important;
+      outline: none;
+      box-shadow: 0 0 0 .8px #8dcfff !important;
+    }
   }
 `;
 

@@ -16,10 +16,10 @@ const Container = styled.div`
 `;
 
 const Message = styled.div`
-  border: 2px ${colors.primary} solid;
+  border: 2px ${colors.primaryText} solid;
   border-radius: 5px;
   font-size: 24px;
-  color: ${colors.primary};
+  color: ${colors.primaryText};
   text-align: center;
   padding: 20px;
 
